@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Web;
 using System.Web.UI;
+using cbaiopn.infrastructure.processor;
 using cbaiopn.core.common;
+using cbaiopn.core;
 
 namespace cbaiopn.web
 {
@@ -20,7 +22,7 @@ namespace cbaiopn.web
 				// Authenticate the request using UUID, Timestamp and Signature
 				AuthenticateRequest(context.Request);
 
-				ProcessNotification ();
+				Process(context.Request);
 			} else {
 				context.Response.Headers.Add("Allow", "POST");
 				context.Response.StatusCode = 405;
@@ -61,8 +63,15 @@ namespace cbaiopn.web
 			}
 		}
 
-		protected void ProcessNotification(){
-			
+		protected void Process(HttpRequest request){
+			String requestNotificationType = request["NotificationType"];
+
+			String requestNotificationData = request ["NotificationData"];
+			NotificationType notificationType = (NotificationType)Enum.Parse (typeof(NotificationType), requestNotificationType);
+
+
+			INotificationProcessor processor = NotificationProcessorFactory.GetProcessor (notificationType);
+			processor.Process (requestNotificationData);
 		}
 
 		protected void ClearResponse(HttpContext context)

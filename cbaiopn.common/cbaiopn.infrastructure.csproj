@@ -29,10 +29,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Processor\NewOrderNotificationProcessor.cs" />
+    <Compile Include="Processor\OrderCancelledNotificationProcessor.cs" />
+    <Compile Include="Processor\OrderReadyToShipNotificationProcessor.cs" />
+    <Compile Include="Processor\NotificationProcessorFactory.cs" />
+    <Compile Include="Processor\NotificationType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Processor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cbaiopn.core\cbaiopn.core.csproj">
+      <Project>{0E9DEE88-9468-40F0-99B4-81606568987E}</Project>
+      <Name>cbaiopn.core</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

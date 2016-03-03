@@ -30,14 +30,14 @@ namespace cbaiopn.core.common
         {
         }
 
-		public String computeSignature(string uuid, string timestamp,
+		public static String computeSignature(string uuid, string timestamp,
 			string awsSecretKey){
 			string data = uuid + timestamp;
 			return calculateRFC2104HMAC (data, awsSecretKey);
 		}
 
 
-        public String calculateRFC2104HMAC(String data, String key)
+        public static String calculateRFC2104HMAC(String data, String key)
         {
             String result = null;
             

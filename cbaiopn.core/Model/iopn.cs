@@ -763,6 +763,11 @@ namespace cbaiopn.core.model.iopn
       private string notificationReferenceIdField;
       private ProcessedOrder processedOrderField;
       private System.Xml.XmlElement[] anyField;
+
+		public override string ToString ()
+   	{
+   		return string.Format ("[NewOrderNotification: NotificationReferenceId={0}", NotificationReferenceId);
+   	}
       /// <remarks/>
       public string NotificationReferenceId
       {
