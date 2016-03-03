@@ -2,7 +2,7 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+Amazon payments The Instant Order Processing Notification API implementaion in C#.
 
 * Quick summary
 * Version
