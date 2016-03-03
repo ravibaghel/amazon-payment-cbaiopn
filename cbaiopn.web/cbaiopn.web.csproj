@@ -63,13 +63,13 @@
     </MonoDevelop>
   </ProjectExtensions>
   <ItemGroup>
-    <ProjectReference Include="..\cbaiopn.common\cbaiopn.infrastructure.csproj">
-      <Project>{A1858BA3-0106-4673-B486-9ED5B7ACCB45}</Project>
-      <Name>cbaiopn.infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\cbaiopn.core\cbaiopn.core.csproj">
       <Project>{0E9DEE88-9468-40F0-99B4-81606568987E}</Project>
       <Name>cbaiopn.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cbaiopn.infrastructure\cbaiopn.infrastructure.csproj">
+      <Project>{A1858BA3-0106-4673-B486-9ED5B7ACCB45}</Project>
+      <Name>cbaiopn.infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
