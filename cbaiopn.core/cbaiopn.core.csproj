@@ -38,12 +38,16 @@
     <Compile Include="Model\order.cs" />
     <Compile Include="Common\SignatureCalculator.cs" />
     <Compile Include="Processor\INotificationProcessor.cs" />
+    <Compile Include="Exceptions\CBAIOPNException.cs" />
+    <Compile Include="Exceptions\CBAIOPNServerException.cs" />
+    <Compile Include="Exceptions\CBAIOPNClientException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Common\" />
     <Folder Include="Processor\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="notification.txt" />

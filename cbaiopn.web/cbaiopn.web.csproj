@@ -33,22 +33,23 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog.1.5.14\lib\net45\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx">
+      <HintPath>..\packages\Serilog.1.5.14\lib\net45\Serilog.FullNetFx.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="web.config" />
-    <Content Include="Default.aspx" />
     <Content Include="ProcessNotification.ashx" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcessNotification.ashx.cs">
       <DependentUpon>ProcessNotification.ashx</DependentUpon>
